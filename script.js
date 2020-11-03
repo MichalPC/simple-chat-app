@@ -5,14 +5,14 @@ const msgContainer = document.getElementById('msg-container')
 
 var nameInput = prompt('What\'s your name?')
 
-if (nameInput === null) {
+if (nameInput === '') {
     nameInput = 'Anonymous'
 }
 createMsgCard("You have joined")
 socket.emit('new-user', nameInput)
 
 socket.on('chat-message', data =>{
-    createMsgCard(data)
+    createMsgCard(`${data.name}: ${data.message}`)
 })
 
 msgForm.addEventListener('submit', e=>{
