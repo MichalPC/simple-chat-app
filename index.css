@@ -1,0 +1,10 @@
+:root {
+    --foreground: rgb(218, 173, 90);
+    --background: rgb(177, 177, 177);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
