@@ -8,4 +8,9 @@ io.on('connection', socket => {
         socket.broadcast.emit('chat-message',
                               message)
     })
+
+    socket.on("new-user", username => {
+        socket.broadcast.emit('chat-message',
+                              username + ' has joined')
+    })
 })
