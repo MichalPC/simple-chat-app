@@ -8,7 +8,7 @@ var nameInput = prompt('What\'s your name?')
 if (nameInput === null) {
     nameInput = 'Anonymous'
 }
-createMsgCard(nameInput + " has joined")
+createMsgCard("You have joined")
 socket.emit('new-user', nameInput)
 
 socket.on('chat-message', data =>{
