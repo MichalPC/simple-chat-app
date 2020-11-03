@@ -14,7 +14,7 @@ msgForm.addEventListener('submit', e=>{
     msgInput.value=""
 })
 
-const createMsgCard = (message) => {
+function createMsgCard(message) {
     const msgCard = document.createElement('div')
     msgCard.className = 'msg-card'
     msgCard.innerText =message 
