@@ -18,6 +18,7 @@ msgForm.addEventListener('submit', e=>{
     e.preventDefault()
     const message = msgInput.value
     socket.emit('send-chat-message', message)
+    createMsgCard("You: " + message)
     msgInput.value=""
 })
 
