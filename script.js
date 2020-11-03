@@ -3,6 +3,13 @@ const msgForm = document.getElementById('msg-input-container')
 const msgInput = document.getElementById('msg-input')
 const msgContainer = document.getElementById('msg-container')
 
+var nameInput = prompt('What\'s your name?')
+
+if (nameInput === null) {
+    nameInput = 'Anonymous'
+}
+createMsgCard(nameInput + " has joined")
+
 socket.on('chat-message', data =>{
     createMsgCard(data)
 })
