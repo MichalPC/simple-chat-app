@@ -1,0 +1,25 @@
+{
+  "name": "simple-chat-app",
+  "version": "1.0.0",
+  "description": "Simple chat web app",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichalPC/simple-chat-app.git"
+  },
+  "author": "MichalPC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichalPC/simple-chat-app/issues"
+  },
+  "homepage": "https://github.com/MichalPC/simple-chat-app#readme",
+  "dependencies": {
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
