@@ -1,5 +1,7 @@
 const io = require('socket.io')(3000)
 
+const users = {}
+
 io.on('connection', socket => {
     socket.emit('chat-message',
                 'Welcome to the simple-chat-app!')
@@ -10,7 +12,9 @@ io.on('connection', socket => {
     })
 
     socket.on("new-user", username => {
-        socket.broadcast.emit('chat-message',
-                              username + ' has joined')
+        users[socket.id] = username
+        socket.broadcast.emit('user-connected',
+                               username)
+        
     })
 })
