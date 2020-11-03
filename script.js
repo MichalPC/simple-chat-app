@@ -9,6 +9,7 @@ if (nameInput === null) {
     nameInput = 'Anonymous'
 }
 createMsgCard(nameInput + " has joined")
+socket.emit('new-user', nameInput)
 
 socket.on('chat-message', data =>{
     createMsgCard(data)
